@@ -16,6 +16,11 @@ useEffect(() => {
 }
     fetchData();
 }, [])
+
+function truncate (str , n) {
+return str?.length > n ? str.substr(0, n-1) + "..." : str;
+}
+
     return (
         <header className="banner" 
         style={{
@@ -33,12 +38,16 @@ useEffect(() => {
 
             <div className="banner__buttons">
              <button className="banner__button">Play</button>
-            <button className="banner__button">My List</button>
+            <button className="banner__button">MyList</button>
 
-            <h1 className="banner__description">{movie?.overview}</h1>
+            <h1 className="banner__description">
+                { truncate (movie?.overview , 150)}</h1>
             {/* description */}
            </div>
          </div>
+
+<div className="banner--fadebottom"></div>
+
          </header>
     )
 }
