@@ -12,6 +12,7 @@ function App() {
      <Banner />
      <Row 
       title="NETFLIX ORIGINAL"
+      developer="Developed by samuel Fanimokun"
        fetchUrl={requests.fetchNetflixOriginals}
        isLargeRow // default {true}
        />
